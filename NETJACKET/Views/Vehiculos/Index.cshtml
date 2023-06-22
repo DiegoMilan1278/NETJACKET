@@ -1,0 +1,149 @@
+﻿@model IEnumerable<NETJACKET.Models.Vehiculo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehiculo1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Servicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chasis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kilometraje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cilindraje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Combustible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Traccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tecnomecanica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correadentada)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehiculo1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Servicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Linea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chasis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kilometraje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cilindraje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Combustible)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Traccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tecnomecanica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correadentada)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Placa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Placa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Placa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

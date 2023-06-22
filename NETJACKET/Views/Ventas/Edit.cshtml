@@ -1,0 +1,64 @@
+﻿@model NETJACKET.Models.Venta
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Venta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Idventa" />
+            <div class="form-group">
+                <label asp-for="Fechaventa" class="control-label"></label>
+                <input asp-for="Fechaventa" class="form-control" />
+                <span asp-validation-for="Fechaventa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Precioventa" class="control-label"></label>
+                <input asp-for="Precioventa" class="form-control" />
+                <span asp-validation-for="Precioventa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mpventa" class="control-label"></label>
+                <input asp-for="Mpventa" class="form-control" />
+                <span asp-validation-for="Mpventa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Limitacionesventa" class="control-label"></label>
+                <input asp-for="Limitacionesventa" class="form-control" />
+                <span asp-validation-for="Limitacionesventa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ciudadventa" class="control-label"></label>
+                <input asp-for="Ciudadventa" class="form-control" />
+                <span asp-validation-for="Ciudadventa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Spventa" class="control-label"></label>
+                <input asp-for="Spventa" class="form-control" />
+                <span asp-validation-for="Spventa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Placaventa" class="control-label"></label>
+                <select asp-for="Placaventa" class="form-control" asp-items="ViewBag.Placaventa"></select>
+                <span asp-validation-for="Placaventa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

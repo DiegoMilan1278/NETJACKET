@@ -1,0 +1,63 @@
+﻿@model NETJACKET.Models.Venta
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Venta</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fechaventa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fechaventa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Precioventa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Precioventa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mpventa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mpventa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Limitacionesventa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Limitacionesventa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadventa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadventa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Spventa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Spventa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PlacaV)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlacaV.Placa)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Idventa" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

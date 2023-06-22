@@ -1,0 +1,61 @@
+﻿@*@model NETJACKET.Models.Compra
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Compra</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fechacompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fechacompra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Preciocompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Preciocompra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mpcompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mpcompra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Limitacionescompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Limitacionescompra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadcompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadcompra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Spcompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Spcompra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PlacacompraNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlacacompraNavigation.Placa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Idcompra">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+*@
